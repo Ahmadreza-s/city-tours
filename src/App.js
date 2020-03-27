@@ -1,12 +1,14 @@
 import React from 'react';
 import './App.scss';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
     return (
-        <div className="App">
-            <i className='fas fa-home fa-2x'></i>
-        </div>
+        <>
+            <Navbar/>
+
+        </>
     );
 }
 
