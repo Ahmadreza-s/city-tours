@@ -1,26 +1,27 @@
 import React from 'react';
 import {ReactComponent as Logo} from '../../assets/img/logo.svg';
 import './Navbar.scss';
+import {NavLink} from 'react-router-dom';
 
 const navbar = () => {
     return (
         <nav className='navbar'>
             <Logo/>
             <ul className="nav-links">
-                <li>
-                    <a href="/" className='nav-link'>
+                <li className='nav-link'>
+                    <NavLink activeClassName='active' exact to={'/home'}>
                         Home
-                    </a>
+                    </NavLink>
                 </li>
-                <li>
-                    <a href="/" className='nav-link'>
+                <li className='nav-link'>
+                    <NavLink activeClassName='active' exact to={'/about'}>
                         About
-                    </a>
+                    </NavLink>
                 </li>
-                <li>
-                    <a href="/" className='nav-link active'>
+                <li className='nav-link'>
+                    <NavLink activeClassName='active' exact to={'/tours'}>
                         Tours
-                    </a>
+                    </NavLink>
                 </li>
             </ul>
         </nav>
